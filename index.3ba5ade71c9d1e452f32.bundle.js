@@ -69,7 +69,13 @@ var AppBar = __webpack_require__(3720);
 var Typography = __webpack_require__(2658);
 // EXTERNAL MODULE: ./node_modules/@mui/material/Box/Box.js + 1 modules
 var Box = __webpack_require__(1508);
+// EXTERNAL MODULE: ./node_modules/@mui/icons-material/GitHub.js
+var GitHub = __webpack_require__(5449);
+// EXTERNAL MODULE: ./node_modules/@mui/material/Toolbar/Toolbar.js + 1 modules
+var Toolbar = __webpack_require__(4386);
 ;// CONCATENATED MODULE: ./src/App.tsx
+
+
 
 
 
@@ -99,9 +105,15 @@ var App = function () {
             setTodo('');
         }
     }, [todo, dispatch]);
+    var handleToSRC = (0,react.useCallback)(function () {
+        window.open('https://github.com/kukhars707/todo-redux-toolkit', '_blank');
+    }, []);
     return (react.createElement(Box/* default */.Z, { sx: { backgroundColor: '#f3f3f3', height: '100vh' } },
-        react.createElement(AppBar/* default */.Z, { position: "static", sx: { marginBottom: '20px' } },
-            react.createElement(Typography/* default */.Z, { variant: "h6", component: "div", sx: { flexGrow: 1 } }, "Todo List")),
+        react.createElement(AppBar/* default */.Z, { position: "static", sx: { marginBottom: '20px', display: 'flex' } },
+            react.createElement(Toolbar/* default */.Z, null,
+                react.createElement(Typography/* default */.Z, { variant: "h6", component: "div" }, "Todo List"),
+                react.createElement(IconButton/* default */.Z, { onClick: handleToSRC },
+                    react.createElement(GitHub/* default */.Z, null)))),
         react.createElement(Box/* default */.Z, { sx: { display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' } },
             react.createElement(Box/* default */.Z, { sx: { display: 'flex', marginBottom: '20px', width: 360, justifyContent: 'space-between' } },
                 react.createElement(TextField/* default */.Z, { value: todo, error: validadion, label: "Todo", placeholder: "Enter your task", onChange: function (e) { return setTodo(e.target.value); } }),
@@ -170,4 +182,4 @@ react_dom.render(react.createElement(react.StrictMode, null,
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);
-//# sourceMappingURL=index.e5d9614c9ac7d60bc5aa.bundle.js.map
+//# sourceMappingURL=index.3ba5ade71c9d1e452f32.bundle.js.map
